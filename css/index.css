@@ -1,0 +1,154 @@
+:root {
+    --very-dark: #18171C;
+    --dynamic-black: #201b1b;
+    --stone-cold: #555555;
+    --white: #ffffff;
+    --yellow: #F7AF24;
+    --borage-blue: #5C64CF;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--very-dark);
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.bg-color {
+    background-color: var(--white);
+}
+
+/*header*/
+.border-header {
+    background-color: var(--white);
+    border-bottom: 2px solid #18171C;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 70px;
+    margin: 15px auto;
+}
+
+.desktop-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.style-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link-active {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--very-dark);
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 9px 20px;
+}
+
+.link-active:active, .link-active:hover {
+    background-color: var(--yellow);
+    color: var(--very-dark);
+}
+
+.button-style {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    background-color: var(--yellow);
+    border: 2px solid var(--very-dark);
+    transition: ease all 0.35s;
+    padding: 12px 28px;
+}
+
+.button-style:hover {
+    background: var(--very-dark);
+    border-color: var(--very-dark);
+    color: var(--white);
+}
+
+/*main*/
+.wrap-container {
+    position: relative;
+}
+
+.icon-plus {
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 69px;
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    transform: rotate(350deg) skew(1deg, 0deg);
+}
+
+.icon-arrow {
+    background-image: url("../img/lightning.svg");
+    background-repeat: no-repeat;
+    height: 144px;
+    width: 153px;
+    position: absolute;
+    bottom: 25%;
+    right: 2%;
+    transform: rotate(205deg) skew(1deg, 0deg);
+}
+
+/*info section with portrait*/
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+.portrait-container {
+    border: 1px solid var(--very-dark);
+    width: 591px;
+    height: 645px;
+}
+
+.transform-text {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--borage-blue);
+    border: 1px solid var(--borage-blue);
+    transform: rotate(-35deg);
+    padding: 8px 20px;
+}
+
+.bs-header {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--very-dark);
+    margin-top: 30px;
+}
+
+.ms-header {
+    font-size: 1.560rem;
+    color: var(--stone-cold);
+    margin-bottom: 30px;
+}
+
+.style-paragraph {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--dynamic-black);
+}
