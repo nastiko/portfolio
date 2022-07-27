@@ -1,0 +1,73 @@
+:root {
+    --very-dark: #191923;
+    --grey-suit: #aeaeb5;
+    --ghost-white: #fafafc;
+    --white: #ffffff;
+    --yellow: #ffba28;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--grey-suit);
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.bg-color {
+    background-color: #4A4658;
+    color: var(--white);
+    margin: 1rem 5rem;
+}
+
+.bg-color_second {
+    background-color: #59546a;
+}
+
+.wrap-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/*aside*/
+.aside-container {
+    flex-direction: column;
+}
+.col.portrait-container {
+    background: linear-gradient(175deg, rgb(104 102 131) 0%, rgb(71 67 84) 100%);
+    text-align: center;
+    padding: 30px;
+}
+.img-wrap {
+    background-image: url("../img/portrait.png");
+    background-color: var(--yellow);
+    background-size: contain;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.fs-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ghost-white);
+    text-align: center;
+    margin: 10px 0;
+}
+
+.fs-sm-text {
+    font-size: 10px;
+    color: var(--grey-suit);
+}
+
+/*icons*/
+.icon-download {
+    background-image: url("../img/download.svg");
+}
