@@ -1,9 +1,9 @@
 :root {
-    --very-dark: #191923;
+    --very-dark: #18171C;
     --grey-suit: #aeaeb5;
     --ghost-white: #fafafc;
     --white: #ffffff;
-    --yellow: #ffba28;
+    --yellow: #F7AF24;
 }
 
 html {
@@ -16,58 +16,71 @@ body {
     line-height: 1.5;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    letter-spacing: 0.1rem;
 }
 
 .bg-color {
-    background-color: #4A4658;
-    color: var(--white);
-    margin: 1rem 5rem;
+    background-color: var(--white);
 }
 
-.bg-color_second {
-    background-color: #59546a;
+/*header*/
+.border-header {
+    border-bottom: 2px solid #18171C;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 70px;
+    margin: 15px auto;
 }
 
-.wrap-container {
+.desktop-navbar {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/*aside*/
-.aside-container {
-    flex-direction: column;
+.style-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.col.portrait-container {
-    background: linear-gradient(175deg, rgb(104 102 131) 0%, rgb(71 67 84) 100%);
-    text-align: center;
-    padding: 30px;
+
+.link-active {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--very-dark);
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 9px 20px;
 }
-.img-wrap {
-    background-image: url("../img/portrait.png");
+
+.link-active:active, .link-active:hover {
     background-color: var(--yellow);
-    background-size: contain;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-}
-.fs-text {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--ghost-white);
-    text-align: center;
-    margin: 10px 0;
+    color: var(--very-dark);
 }
 
-.fs-sm-text {
-    font-size: 10px;
-    color: var(--grey-suit);
+.button-style {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    background-color: var(--yellow);
+    border: 2px solid var(--very-dark);
+    transition: ease all 0.35s;
+    padding: 12px 28px;
 }
 
-/*icons*/
-.icon-download {
-    background-image: url("../img/download.svg");
+.button-style:hover {
+    background: var(--very-dark);
+    border-color: var(--very-dark);
+    color: var(--white);
+}
+
+/*main*/
+.wrap-container {
+    position: relative;
 }
