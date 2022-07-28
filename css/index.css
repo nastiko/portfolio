@@ -3,6 +3,7 @@
     --dynamic-black: #201b1b;
     --stone-cold: #555555;
     --white: #ffffff;
+    --apricot-ice: #fef7e9;
     --yellow: #F7AF24;
     --borage-blue: #5C64CF;
 }
@@ -83,8 +84,10 @@ body {
 }
 
 /*main*/
-.wrap-container {
+.container-fluid.wrap-container {
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 .icon-plus {
@@ -117,7 +120,7 @@ body {
 }
 
 .portrait-container {
-    border: 1px solid var(--very-dark);
+    border: 2px solid var(--very-dark);
     width: 591px;
     height: 645px;
 }
@@ -151,4 +154,88 @@ body {
     font-size: 1.125rem;
     font-weight: 400;
     color: var(--dynamic-black);
+}
+
+.icons-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+    border-bottom: 2px solid var(--very-dark);
+}
+
+.icon-purple {
+    background-image: url(../img/circle-purple.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.icon-yellow {
+    background-image: url(../img/circle-yellow.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+/*skills section*/
+.skills-section {
+    background-color: var(--apricot-ice);
+}
+.img-wave::after {
+    content: "";
+    background-image: url("../img/wave-line.svg");
+    background-repeat: no-repeat;
+    width: 92px;
+    height: 14px;
+    position: absolute;
+}
+
+.skill-item {
+    padding: 15px;
+    border: 2px solid var(--very-dark);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 0 0 var(--very-dark);
+    transition: ease all 0.35s;
+}
+
+.icon-html {
+    background-image: url("../img/html5.svg");
+}
+
+.icon-css {
+    background-image: url("../img/css3.svg");
+}
+
+.icon-bootstrap {
+    background-image: url("../img/bootstrap.svg");
+}
+
+.icon-git {
+    background-image: url("../img/git.svg");
+}
+
+.icon-figma {
+    background-image: url("../img/figma.svg");
+}
+
+
+
+
+.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+
+.style-text {
+    font-weight: 700;
+    color: var(--very-dark);
+    padding-left: 15px;
+    margin: 0;
 }
