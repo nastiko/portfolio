@@ -131,7 +131,7 @@ body {
 }
 
 .portrait {
-    background-image: url("../img/portrait.jpg");
+    background-image: url("../img/photo-portrait.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
@@ -406,7 +406,7 @@ body {
 }
 
 .avatar {
-    background-image: url(../img/avatar.jpg);
+    background-image: url(../img/box-avatar.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -444,4 +444,28 @@ body {
 .work-place {
     font-size: 0.875rem;
     color: var(--stone-cold);
+}
+
+/*project section*/
+.grid-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.box-icon_purple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--borage-blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.icon-right-arrow {
+    background-image: url("../img/right-arrow.svg");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 33px;
 }
