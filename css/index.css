@@ -15,7 +15,7 @@ html {
 
 body {
     color: var(--very-dark);
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.5;
     font-weight: 300;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 .link-active {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--very-dark);
     border-radius: 30px;
@@ -152,7 +152,7 @@ body {
 }
 
 .bs-header {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 600;
     line-height: 1.1;
     color: var(--very-dark);
@@ -283,7 +283,7 @@ body {
 
 .skill-text {
     color: var(--very-dark);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 400;
     padding: 38px 0;
     margin: 0;
@@ -301,12 +301,12 @@ body {
 
 
 .skill-item {
-    padding: 15px;
-    border: 2px solid var(--very-dark);
     display: flex;
     align-items: center;
+    border: 2px solid var(--very-dark);
     box-shadow: 0 0 0 0 var(--very-dark);
     transition: ease all 0.35s;
+    padding: 15px;
 }
 
 .skill-item:hover, .feature-box:hover {
@@ -447,11 +447,58 @@ body {
 }
 
 /*project section*/
-.grid-wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 0;
+.img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-discover, .img-email_template, .img-prototype {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 345px;
+    border-bottom: 2px solid var(--very-dark);
+}
+
+.img-yummy_restaurant {
+    background-image: url("../img/yummy_restaurant.png");
+}
+
+.img-colmary {
+    background-image: url("../img/colmary.png");
+}
+
+.img-discover {
+    background-image: url("../img/discover.png");
+    background-position: bottom;
+}
+
+.img-fotomatic {
+    background-image: url("../img/fotomatic.png");
+}
+
+.img-email_template {
+    background-image: url("../img/email_template.png");
+    background-position: bottom;
+}
+
+.img-prototype {
+    background-image: url("../img/prototype.png");
+}
+
+.info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.title-item {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--very-dark);
+    margin: 0 0 8px;
+}
+
+.website-title {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: #555555;
 }
 
 .box-icon_purple {
