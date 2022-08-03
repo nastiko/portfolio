@@ -560,3 +560,69 @@ body {
     border: 1px solid var(--very-dark);
     box-shadow: none;
 }
+
+.flex-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.flex-box:nth-last-child(2) {
+    margin-bottom: 5rem;
+}
+
+.bg-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--borage-blue);
+    width: 51px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.icon-outlook {
+    background-image: url("../img/outlook_email.svg");
+    width: 30px;
+    height: 30px;
+}
+
+.icon-location {
+    background-image: url("../img/location.svg");
+    width: 30px;
+    height: 30px;
+}
+
+.size-box {
+    width: 85%;
+}
+
+.contact-list {
+    list-style: none;
+    border-bottom: 2px solid var(--very-dark);
+    padding: 0;
+}
+
+.title-list {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    color: var(--stone-cold);
+    line-height: 1.2;
+    margin: 0 0 5px;
+}
+
+.list-info {
+    font-size: 1.375rem;
+    color: var(--very-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.img-contact {
+    background-image: url("../img/contact.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    height: 252px;
+}
