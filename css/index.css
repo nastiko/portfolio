@@ -517,3 +517,46 @@ body {
     width: 32px;
     height: 33px;
 }
+
+/*contact form*/
+.img-wave_contact::after {
+    content: "";
+    background-image: url("../img/wave-line.svg");
+    background-repeat: no-repeat;
+    width: 92px;
+    height: 14px;
+    position: absolute;
+    left: 36%;
+}
+
+.white-box {
+    border: 2px solid var(--very-dark);
+    padding: 35px;
+}
+
+.form-header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--very-dark);
+    margin: 0 0 5px;
+}
+
+.support-text {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--stone-cold);
+    margin: 0 0 30px;
+}
+
+.label-style {
+    font-weight: 500;
+    color: var(--stone-cold);
+    margin-bottom: .5rem;
+}
+
+.form-control.input-style {
+    border-radius: 0;
+    border: 1px solid var(--very-dark);
+    box-shadow: none;
+}
