@@ -518,6 +518,23 @@ body {
     height: 33px;
 }
 
+.btn.button-style {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    background-color: var(--yellow);
+    border: 2px solid var(--very-dark);
+    border-radius: 0;
+    transition: ease all 0.35s;
+    padding: 12px 28px;
+}
+
+.btn.button-style:hover {
+    background: var(--very-dark);
+    border-color: var(--very-dark);
+    color: var(--white);
+}
+
 /*contact form*/
 .img-wave_contact::after {
     content: "";
@@ -625,4 +642,48 @@ body {
     background-size: contain;
     background-position: right;
     height: 252px;
+}
+
+/*footer*/
+.footer-top {
+    border-top: 2px solid var(--very-dark);
+    padding: 15px;
+}
+
+.wrap-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-linkedin, .icon-github {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.icon-linkedin {
+    background-image: url("../img/linkedin.svg");
+}
+
+.icon-github {
+    background-image: url("../img/github.svg");
+}
+
+.color-text {
+    color: var(--stone-cold);
+    margin: 0;
 }
