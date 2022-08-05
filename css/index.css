@@ -120,10 +120,8 @@ body {
     height: 69px;
     width: 69px;
     position: absolute;
-    /*top: 25%;
-    left: 2%;*/
-    top: 155px;
-    left: 50px;
+    top: 1%;
+    left: 5%;
     transform: rotate(350deg) skew(1deg, 0deg);
 }
 
@@ -133,10 +131,8 @@ body {
     height: 144px;
     width: 153px;
     position: absolute;
-    /*  bottom: 25%;
-      right: 2%;*/
-    top: 385px;
-    right: 50px;
+    top: 7%;
+    right: 4%;
     transform: rotate(205deg) skew(1deg, 0deg);
 }
 
@@ -149,7 +145,6 @@ body {
 }
 
 .portrait-container {
-    /*border: 2px solid var(--very-dark);*/
     margin: 0 auto;
 }
 
@@ -253,7 +248,7 @@ body {
 }
 
 .height-paragraph {
-    height: 185px;
+    height: 110px;
 }
 
 .box-icon {
@@ -386,13 +381,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 15px;
-}
-
-.grid-learning {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     gap: 15px;
 }
 
@@ -605,7 +593,6 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
 }
 
 .flex-box:nth-last-child(2) {
@@ -642,6 +629,7 @@ body {
     list-style: none;
     border-bottom: 2px solid var(--very-dark);
     padding: 0;
+    margin-left: 20px;
 }
 
 .title-list {
@@ -737,5 +725,51 @@ body {
         top: 100%;
         left: 0;
         right: 0;
+    }
+    .col-lg-8.mobile-home_section {
+        text-align: center;
+        padding-top: 0!important;
+        padding-bottom: 2rem!important;
+    }
+    .list-info {
+        font-size: 1.125rem;
+    }
+    .img-contact {
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .icon-plus, .icon-arrow {
+        display: none;
+    }
+    .mobile-transform_text {
+        transform: rotate(0deg);
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    /*.img-wave_service::after {
+        left: 300px;
+    }*/
+    .avatar-container {
+        gap: 0;
+    }
+    .code-svg, .zigzag-svg {
+        display: none;
+    }
+    .grid-skills {
+        grid-template-columns: 1fr;
+    }
+    .white-box {
+        padding: 10px;
+    }
+    .list-info {
+        font-size: 1rem;
+    }
+    .wrap-footer {
+        flex-direction: column;
+        gap: 10px;
     }
 }
