@@ -158,15 +158,22 @@ body {
     border-top: none;
 }
 
-.transform-text {
+.transform-text_hello, .transform-text {
     display: inline-block;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.2;
     color: var(--borage-blue);
     border: 1px solid var(--borage-blue);
-    transform: rotate(-35deg);
     padding: 8px 20px;
+}
+
+.transform-text_hello {
+    transform: rotate(-35deg);
+}
+
+.transform-text {
+    transform: rotate(-15deg);
 }
 
 .bs-header {
@@ -174,7 +181,7 @@ body {
     font-weight: 600;
     line-height: 1.1;
     color: var(--very-dark);
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .ms-header {
@@ -187,6 +194,7 @@ body {
     font-size: 1.125rem;
     font-weight: 400;
     color: var(--dynamic-black);
+    margin-bottom: 30px;
 }
 
 .icons-list {
@@ -214,6 +222,23 @@ body {
     height: 16px;
 }
 
+.purple-button {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    background: var(--borage-blue);
+    color: var(--white);
+    border: 2px solid transparent;
+    transition: ease all 0.35s;
+    padding: 12px 28px;
+}
+
+.purple-button:hover {
+    background: var(--very-dark);
+    border-color: var(--very-dark);
+    color: var(--white);
+}
+
 /*services section*/
 .img-wave_service::after {
     content: "";
@@ -229,6 +254,7 @@ body {
     background: var(--white);
     border: 2px solid var(--very-dark);
     box-shadow: 0 0 0 0 var(--very-dark);
+    height: 395px;
     transition: ease all 0.35s;
     padding: 30px!important;
 }
@@ -295,7 +321,7 @@ body {
     font-weight: 600;
     line-height: 1.3;
     color: var(--very-dark);
-    margin-top: 50px;
+    margin-top: 15px;
     margin-bottom: 30px;
 }
 
@@ -351,8 +377,8 @@ body {
     background-image: url("../img/figma.svg");
 }
 
-.icon-canva {
-    background-image: url("../img/canva.svg");
+.icon-sass {
+    background-image: url("../img/sass.svg");
 }
 
 .icon-javascript {
@@ -363,7 +389,7 @@ body {
     background-image: url("../img/jquery.svg");
 }
 
-.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-canva, .icon-javascript, .icon-jquery {
+.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-sass, .icon-javascript, .icon-jquery {
     background-repeat: no-repeat;
     background-size: contain;
     width: 50px;
@@ -381,6 +407,13 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+.grid-skills_learning {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 15px;
 }
 
@@ -458,6 +491,13 @@ body {
 }
 
 /*project section*/
+.feature-box_portfolio {
+    background: var(--white);
+    border: 2px solid var(--very-dark);
+    box-shadow: 0 0 0 0 var(--very-dark);
+    transition: ease all 0.35s;
+}
+
 .img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-discover, .img-email_template, .img-prototype {
     background-repeat: no-repeat;
     background-size: cover;
@@ -574,7 +614,6 @@ body {
     font-size: 1.125rem;
     font-weight: 400;
     color: var(--stone-cold);
-    margin: 0 0 30px;
 }
 
 .label-style {
@@ -716,7 +755,7 @@ body {
         height: 30px;
     }
     .dropdown.mobile-list {
-        display: block;
+        display: none;
         z-index: 1000;
         background-color: var(--white);
         border-bottom: 2px solid var(--very-dark);
@@ -737,6 +776,9 @@ body {
     .img-contact {
         background-position: center;
     }
+    .flex-box:nth-last-child(2) {
+        margin-bottom: 3rem;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -746,7 +788,9 @@ body {
     .mobile-transform_text {
         transform: rotate(0deg);
     }
-
+    .col-md-6.mobile-form {
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -759,11 +803,11 @@ body {
     .code-svg, .zigzag-svg {
         display: none;
     }
-    .grid-skills {
+    .grid-skills, .grid-skills_learning {
         grid-template-columns: 1fr;
     }
     .white-box {
-        padding: 10px;
+        padding: 15px;
     }
     .list-info {
         font-size: 1rem;
