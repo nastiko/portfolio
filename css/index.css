@@ -166,6 +166,11 @@ body {
     color: var(--borage-blue);
     border: 1px solid var(--borage-blue);
     padding: 8px 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .transform-text_hello {
