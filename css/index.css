@@ -397,11 +397,15 @@ body {
     background-image: url("../img/javascript.svg");
 }
 
+.icon-react {
+    background-image: url("../img/react.svg");
+}
+
 .icon-jquery {
     background-image: url("../img/jquery.svg");
 }
 
-.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-sass, .icon-javascript, .icon-jquery {
+.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-sass, .icon-javascript, .icon-jquery, .icon-react {
     background-repeat: no-repeat;
     background-size: contain;
     width: 50px;
@@ -599,16 +603,6 @@ body {
 }
 
 /*contact form*/
-/*.img-wave_contact::after {
-    content: "";
-    background-image: url("../img/wave-line.svg");
-    background-repeat: no-repeat;
-    width: 92px;
-    height: 14px;
-    position: absolute;
-    left: 36%;
-}*/
-
 .white-box {
     border: 2px solid var(--very-dark);
     padding: 35px;
@@ -704,6 +698,10 @@ body {
     background-size: contain;
     background-position: right;
     height: 252px;
+}
+
+.submit-style {
+    margin-top: 1rem !important;
 }
 
 /*footer*/
