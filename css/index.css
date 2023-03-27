@@ -628,11 +628,30 @@ body {
     margin-bottom: .5rem;
 }
 
-.form-control.input-style {
+.input-control.input-style {
     border-radius: 0;
     border: 1px solid var(--very-dark);
     box-shadow: none;
 }
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    margin-top: 2px;
+}
+
+.input-control.error textarea {
+    border-color: #ff3860;
+}
+
+
 
 .flex-box {
     display: flex;

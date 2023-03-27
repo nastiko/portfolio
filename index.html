@@ -336,25 +336,29 @@
                         <p class="support-text">I would love to hear from you.</p>
                         <form id="form-submit" action="../portfolio/send_mail.php" method="post">
                             <div class="row" id="block-submit">
-                                <div class="col-md-6">
+                                <div class="col-md-6 input-control">
                                     <label class="label-style" for="name">Full Name</label>
                                     <input class="form-control input-style" type="text" id="name" name="name"
                                            placeholder="Name*">
+                                    <div class="error"></div>
                                 </div>
-                                <div class="col-md-6 mobile-form">
+                                <div class="col-md-6 mobile-form input-control">
                                     <label class="label-style" for="email">Your Email</label>
                                     <input class="form-control input-style" type="email" id="email" name="email"
                                            placeholder="Email*">
+                                    <div class="error"></div>
                                 </div>
-                                <div class="col-md-12 mt-3">
+                                <div class="col-md-12 mt-3 input-control">
                                     <label class="label-style" for="subject">Subject</label>
                                     <input class="form-control input-style" type="text" id="subject" name="subject"
-                                           placeholder="Subject*">
+                                           placeholder="Subject*" maxlength = "30">
+                                    <div class="error"></div>
                                 </div>
-                                <div class="col-md-12 mt-3">
+                                <div class="col-md-12 mt-3 input-control">
                                     <label class="label-style" for="message">Your message</label>
                                     <textarea class="form-control input-style" rows="5" id="message" name="message"
-                                              placeholder="Your message*"></textarea>
+                                              placeholder="Your message*" maxlength = "250"></textarea>
+                                    <div class="error"></div>
                                 </div>
                                 <div class="col-md-2 mt-3">
                                     <input class="button-style" type="submit" formtarget="_blank" value="Send Message">
