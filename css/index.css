@@ -405,7 +405,11 @@ body {
     background-image: url("../img/jquery.svg");
 }
 
-.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-sass, .icon-javascript, .icon-jquery, .icon-react {
+.icon-oop {
+    background-image: url("../img/oop.svg");
+}
+
+.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-sass, .icon-javascript, .icon-jquery, .icon-react, .icon-oop {
     background-repeat: no-repeat;
     background-size: contain;
     width: 50px;
@@ -514,7 +518,7 @@ body {
     transition: ease all 0.35s;
 }
 
-.img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-discover, .img-email_template, .img-prototype {
+.img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -530,9 +534,8 @@ body {
     background-image: url("../img/colmary.png");
 }
 
-.img-discover {
-    background-image: url("../img/discover.png");
-    background-position: bottom;
+.img-sole_shoes {
+    background-image: url("../img/jQuery.png");
 }
 
 .img-fotomatic {
