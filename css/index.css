@@ -525,7 +525,7 @@ body {
     transition: ease all 0.35s;
 }
 
-.img-react_films, .img-react_portfolio, .img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype {
+.img-react_films, .img-react_portfolio, .img-ecommerce, .img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -539,6 +539,10 @@ body {
 
 .img-react_films {
     background-image: url("../img/react_films.png");
+}
+
+.img-ecommerce {
+    background-image: url("../img/stellar.png");
 }
 
 .img-yummy_restaurant {
