@@ -525,7 +525,7 @@ body {
     transition: ease all 0.35s;
 }
 
-.img-react_films, .img-react_portfolio, .img-ecommerce, .img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype {
+.img-react_films, .img-react_portfolio, .img-ecommerce, .img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype, .img-artemis, .img-earthstormmedia, .img-react_form {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -568,6 +568,18 @@ body {
 
 .img-prototype {
     background-image: url("../img/prototype.png");
+}
+
+.img-artemis {
+    background-image: url("../img/artemis.png");
+}
+
+.img-earthstormmedia {
+    background-image: url("../img/earthstormmedia.png");
+}
+
+.img-react_form {
+    background-image: url("../img/react_form.png");
 }
 
 .info-wrap {
