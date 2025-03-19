@@ -434,7 +434,15 @@ body {
     background-image: url("../img/styled-components.svg");
 }
 
-.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-sass, .icon-javascript, .icon-jquery, .icon-react, .icon-oop, .icon-tailwind, .icon-alpine {
+.icon-typescript {
+    background-image: url("../img/typescript.svg");
+}
+
+.icon-redux {
+    background-image: url("../img/redux.svg");
+}
+
+.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-sass, .icon-javascript, .icon-jquery, .icon-react, .icon-oop, .icon-tailwind, .icon-alpine, .icon-typescript, .icon-redux {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -519,14 +527,24 @@ body {
 
 .flex-container {
     display: flex;
-    gap: 20px;
 }
 
 .sm-header {
-    width: 50%;
+    width: 100%;
     font-size: 1rem;
     font-weight: 700;
     color: var(--very-dark);
+    margin: 0;
+}
+
+.sm-header .units {
+    margin-bottom: 3px;
+}
+
+.extra-info {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--stone-cold);
     margin: 0;
 }
 
@@ -887,6 +905,10 @@ body {
 
     .img-style_coming {
         object-fit: contain;
+    }
+
+    .flex-container {
+        gap: 10px;
     }
 }
 
