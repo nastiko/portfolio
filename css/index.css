@@ -578,7 +578,9 @@ body {
     object-fit: cover;
 }
 
-.img-react_films, .img-react_portfolio, .img-ecommerce, .img-yummy_restaurant, .img-colmary, .img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype, .img-artemis, .img-earthstormmedia, .img-react_form, .img-coming {
+.img-react_films, .img-react_portfolio, .img-ecommerce, .img-yummy_restaurant, .img-colmary,
+.img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype, .img-artemis,
+.img-earthstormmedia, .img-assetcool, .img-react_form, .img-coming, .img-react_arthome {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -638,8 +640,16 @@ body {
     background-image: url("../img/earthstormmedia.png");
 }
 
+.img-assetcool {
+    background-image: url("../img/assetcool.png");
+}
+
 .img-react_form {
     background-image: url("../img/react_form.png");
+}
+
+.img-react_arthome {
+    background-image: url("../img/arthome.png");
 }
 
 .info-wrap {
