@@ -442,7 +442,23 @@ body {
     background-image: url("../img/redux.svg");
 }
 
-.icon-html, .icon-css, .icon-bootstrap, .icon-git, .icon-figma, .icon-sass, .icon-javascript, .icon-jquery, .icon-react, .icon-oop, .icon-tailwind, .icon-alpine, .icon-typescript, .icon-redux {
+.icon-next {
+    background-image: url("../img/nextjs.svg");
+}
+
+.icon-vercel {
+    background-image: url("../img/vercel.svg");
+}
+
+.icon-vue {
+    background-image: url("../img/vue.svg");
+}
+
+.icon-html, .icon-css, .icon-bootstrap, .icon-git,
+.icon-figma, .icon-sass, .icon-javascript,
+.icon-jquery, .icon-react, .icon-oop,
+.icon-tailwind, .icon-alpine, .icon-typescript,
+.icon-redux, .icon-next, .icon-vercel, .icon-vue {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -580,7 +596,7 @@ body {
 
 .img-react_films, .img-react_portfolio, .img-ecommerce, .img-yummy_restaurant, .img-colmary,
 .img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype, .img-artemis,
-.img-earthstormmedia, .img-assetcool, .img-react_form, .img-coming, .img-react_arthome {
+.img-earthstormmedia, .img-assetcool, .img-react_form, .img-coming, .img-react_arthome, .img-printforge {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -650,6 +666,10 @@ body {
 
 .img-react_arthome {
     background-image: url("../img/arthome.png");
+}
+
+.img-printforge {
+    background-image: url("../img/printforge.png");
 }
 
 .info-wrap {
