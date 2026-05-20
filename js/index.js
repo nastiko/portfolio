@@ -104,10 +104,16 @@ function validateForm() {
     return validationResult;
 }
 
+function getYear() {
+   const date = new Date();
+   return date.getFullYear();
+}
+
 let form = document.getElementById('form-submit');
 let fullName = document.getElementById('name');
 let email = document.getElementById('email');
 let subject = document.getElementById('subject');
 let message = document.getElementById('message');
+document.getElementById('year').textContent = getYear();
 
 form.addEventListener('submit', handleSubmit);

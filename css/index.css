@@ -246,12 +246,13 @@ body {
 }
 
 /*services section*/
-.img-wave_inner,.img-wave_last {
+.img-wave_inner, .img-wave_last {
     position: relative;
     display: inline;
     vertical-align: top;
     padding-bottom: 15px;
 }
+
 .img-wave_last::after {
     content: "";
     background-image: url("../img/wave-line.svg");
@@ -269,7 +270,7 @@ body {
     box-shadow: 0 0 0 0 var(--very-dark);
     height: 395px;
     transition: ease all 0.35s;
-    padding: 30px!important;
+    padding: 30px !important;
 }
 
 .number {
@@ -466,7 +467,7 @@ body {
     height: 50px;
 }
 
-.icon-framer_motion, .icon_router,.icon_react_bootstrap, .icon_styled_components {
+.icon-framer_motion, .icon_router, .icon_react_bootstrap, .icon_styled_components {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -596,7 +597,8 @@ body {
 
 .img-react_films, .img-react_portfolio, .img-ecommerce, .img-yummy_restaurant, .img-colmary,
 .img-fotomatic, .img-sole_shoes, .img-email_template, .img-prototype, .img-artemis,
-.img-earthstormmedia, .img-assetcool, .img-react_form, .img-coming, .img-react_arthome, .img-printforge {
+.img-earthstormmedia, .img-assetcool, .img-react_form, .img-coming, .img-react_arthome, .img-printforge,
+.img-britishFires, .img-profilestore, .img-seafish, .img-wessex {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -670,6 +672,22 @@ body {
 
 .img-printforge {
     background-image: url("../img/printforge.png");
+}
+
+.img-britishFires {
+    background-image: url("../img/britishFires.png");
+}
+
+.img-profilestore {
+    background-image: url("../img/profileStore.png");
+}
+
+.img-seafish {
+    background-image: url("../img/seafood.png");
+}
+
+.img-wessex {
+    background-image: url("../img/wessexInternet.png");
 }
 
 .info-wrap {
@@ -895,10 +913,12 @@ body {
     .desktop-navbar {
         display: none;
     }
+
     .mobile-navbar {
         display: flex;
         justify-content: flex-end;
     }
+
     .icon-menu {
         display: block;
         background-image: url("../img/menu.svg");
@@ -906,6 +926,7 @@ body {
         width: 30px;
         height: 30px;
     }
+
     .dropdown.mobile-list {
         display: none;
         z-index: 1000;
@@ -917,14 +938,17 @@ body {
         left: 0;
         right: 0;
     }
+
     .col-lg-8.mobile-home_section {
         text-align: center;
-        padding-top: 0!important;
-        padding-bottom: 2rem!important;
+        padding-top: 0 !important;
+        padding-bottom: 2rem !important;
     }
+
     .list-info {
         font-size: 1.125rem;
     }
+
     .img-contact {
         background-position: center;
     }
@@ -942,13 +966,15 @@ body {
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .icon-plus, .icon-arrow {
         display: none;
     }
+
     .mobile-transform_text {
         transform: rotate(0deg);
     }
+
     .col-md-6.mobile-form {
         margin-top: 1rem;
     }
@@ -958,18 +984,23 @@ body {
     .avatar-container {
         gap: 0;
     }
+
     .code-svg, .zigzag-svg {
         display: none;
     }
+
     .grid-skills, .grid-skills_learning {
         grid-template-columns: 1fr;
     }
+
     .white-box {
         padding: 15px;
     }
+
     .list-info {
         font-size: 1rem;
     }
+
     .wrap-footer {
         flex-direction: column;
         gap: 10px;

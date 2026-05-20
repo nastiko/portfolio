@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap.min.css">
     <title>Anastasia Hrynkevich</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <script src="js/jquery/jquery-3.6.0.min.js" type="text/javascript"></script>
 </head>
 <body class="bg-color" data-bs-spy="scroll" data-bs-target=".desktop-navbar" data-bs-offset="10">
@@ -58,11 +71,11 @@
             <div class="col-lg-8 mobile-home_section ps-xl-3 py-5">
                 <span class="transform-text_hello mobile-transform_text">Hello.</span>
                 <h1 class="bs-header">Anastasia Hrynkevich</h1>
-                <h3 class="ms-header">Front-end Developer</h3>
-                <p class="style-paragraph">Experienced in designing responsive, user-friendly website mockups and interfaces using modern web
-                    design principles. Proficient in writing and debugging code from scratch, with expertise in React, Styled
-                    Components, React Router 6, Alpine.js, Tailwind, and Bootstrap, among other tools. Skilled in building
-                    dynamic, interactive websites utilizing JavaScript, REST APIs, and more.</p>
+                <h3 class="ms-header">Frontend Engineer</h3>
+                <p class="style-paragraph">Frontend Engineer with hands-on experience building responsive, user-friendly web applications.
+                    Specialising in React, Tailwind, SCSS, animation and REST API integration, with a strong focus on eCommerce development
+                    and modern FE workflows. Comfortable working across the full FE lifecycle, from translating designs into clean,
+                    accessible code to collaborating with BE and QA teams to deliver polished, production-ready products.</p>
                 <a href="#section-contact">
                     <button class="purple-button" type="button">Let's Talk</button>
                 </a>
@@ -91,7 +104,7 @@
                         Experience
                         </span>
                     </h3>
-                    <p class="style-paragraph mb-0">Since I started my path toward a career in web development, I have worked hard to learn web development skills.</p>
+                    <p class="style-paragraph mb-0">Since starting my web development journey, I’ve continuously strengthened my frontend engineering skills by building scalable, user-focused applications.</p>
                 </div>
                 <div class="col-lg-6 d-flex justify-content-center align-items-center ps-xl-5 pt-5">
                     <div class="avatar-container">
@@ -116,6 +129,18 @@
                             <span class="style-text">React Router</span>
                         </div>
                         <div class="col-lg-12 col-md-10 col-sm-12 skill-item">
+                            <span class="icon-next"></span>
+                            <span class="style-text">Next.js</span>
+                        </div>
+                        <div class="col-lg-12 col-md-10 col-sm-12 skill-item">
+                            <span class="icon-typescript"></span>
+                            <span class="style-text">TypeScript</span>
+                        </div>
+                        <div class="col-lg-12 col-md-10 col-sm-12 skill-item">
+                            <span class="icon-vercel"></span>
+                            <span class="style-text">Vercel</span>
+                        </div>
+                        <div class="col-lg-12 col-md-10 col-sm-12 skill-item">
                             <div class="box-icon_purple">
                                 <span class="icon_react_bootstrap"></span>
                             </div>
@@ -126,6 +151,10 @@
                                 <span class="icon_styled_components"></span>
                             </div>
                             <span class="style-text">Styled Components</span>
+                        </div>
+                        <div class="col-lg-12 col-md-10 col-sm-12 skill-item">
+                            <span class="icon-vue"></span>
+                            <span class="style-text">Vue.js <small>(Basic)</small></span>
                         </div>
                         <div class="col-lg-12 col-md-10 col-sm-12 skill-item">
                             <div class="box-icon_purple">
@@ -177,9 +206,26 @@
                         <div class="flex-list">
                             <ul class="experience-list">
                                 <li class="flex-container">
+                                    <h6 class="sm-header">Nov 2025 - Present</h6>
+                                    <div class="w-100">
+                                        <h5 class="info-text">Frontend Engineer</h5>
+                                        <span class="work-place">Alternative Airlines, UK</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="experience-list">
+                                <li class="flex-container">
+                                    <h6 class="sm-header">Jun 2025 - Nov 2025</h6>
+                                    <div class="w-100">
+                                        <h5 class="info-text">Frontend Developer</h5>
+                                        <span class="work-place">Cold Banana, UK</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="experience-list">
+                                <li class="flex-container">
                                     <div class="flex sm-header">
-                                        <h6 class="units">Jul 2023 - Dec 2024</h6>
-                                        <span class="extra-info">Position made redundant</span>
+                                        <h6 class="units fw-bold">Jul 2023 - Oct 2024</h6>
                                     </div>
                                     <div class="w-100">
                                         <h5 class="info-text">Frontend Developer</h5>
@@ -237,6 +283,20 @@
             <div class="row pb-4 d-flex gy-4">
                 <div class="col-xxl-4 col-lg-6 col-sm-12">
                     <div class="feature-box_portfolio p-0">
+                        <div class="img-printforge"></div>
+                        <div class="info-wrap">
+                            <div>
+                                <h3 class="title-item">Printforge</h3>
+                                <h6 class="website-title">React, Next.js, TypeScript, JS, Tailwind</h6>
+                            </div>
+                            <div class="box-icon_purple">
+                                <a class="icon-right-arrow" href="https://next-printforge.vercel.app/"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-lg-6 col-sm-12">
+                    <div class="feature-box_portfolio p-0">
                         <!--<div class="img-wrap">
                             <img class="img-style_coming" src="img/coming.png" alt="Coming soon"/>
                         </div>-->
@@ -261,7 +321,7 @@
                                 <h6 class="website-title">React, Tailwind, Yup</h6>
                             </div>
                             <div class="box-icon_purple">
-                                <a class="icon-right-arrow" href="https://anastasia.grinkevi.ch/react/form/"
+                                <a class="icon-right-arrow" href="https://anastasia-web.dev/react/form/"
                                    target="_blank"></a>
                             </div>
                         </div>
@@ -368,17 +428,76 @@
             <div class="row pb-4 d-flex gy-4 pb-5">
                 <div class="col-xxl-4 col-lg-6 col-sm-12">
                     <div class="feature-box_portfolio p-0">
+                        <div class="img-profilestore"></div>
+                        <div class="info-wrap">
+                            <div>
+                                <h3 class="title-item">Profilestore</h3>
+                                <h6 class="website-title">Vue.js, SCSS, Storybook, E-commerce</h6>
+                            </div>
+                            <div class="box-icon_purple flex-shrink-0">
+                                <a class="icon-right-arrow" href="https://profilestore.co.uk/"
+                                   target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-lg-6 col-sm-12">
+                    <div class="feature-box_portfolio p-0">
+                        <div class="img-seafish"></div>
+                        <div class="info-wrap">
+                            <div>
+                                <h3 class="title-item">Seafood in Numbers | Seafish</h3>
+                                <h6 class="website-title">JS, SCSS, Animation</h6>
+                            </div>
+                            <div class="box-icon_purple flex-shrink-0">
+                                <a class="icon-right-arrow" href="https://www.seafish.org/seafood-in-numbers/"
+                                   target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-lg-6 col-sm-12">
+                    <div class="feature-box_portfolio p-0">
+                        <div class="img-wessex"></div>
+                        <div class="info-wrap">
+                            <div>
+                                <h3 class="title-item">Wessex Internet</h3>
+                                <h6 class="website-title">JS, SCSS</h6>
+                            </div>
+                            <div class="box-icon_purple flex-shrink-0">
+                                <a class="icon-right-arrow" href="https://www.wessexinternet.com/"
+                                   target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-lg-6 col-sm-12">
+                    <div class="feature-box_portfolio p-0">
                         <div class="img-artemis"></div>
                         <div class="info-wrap">
-                                <div>
-                                    <h3 class="title-item">Artemis Technologies</h3>
-                                    <h6 class="website-title">Alpine.js, Tailwind, Animation, CMS, JSON, HTML</h6>
-                                </div>
-                                <div class="box-icon_purple flex-shrink-0">
-                                    <a class="icon-right-arrow" href="https://www.artemistechnologies.co.uk/"
-                                       target="_blank"></a>
-                                </div>
+                            <div>
+                                <h3 class="title-item">Artemis Technologies</h3>
+                                <h6 class="website-title">Alpine.js, Tailwind, Animation, CMS, JSON, HTML</h6>
                             </div>
+                            <div class="box-icon_purple flex-shrink-0">
+                                <a class="icon-right-arrow" href="https://www.artemistechnologies.co.uk/"
+                                   target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-lg-6 col-sm-12">
+                    <div class="feature-box_portfolio p-0">
+                        <div class="img-britishFires"></div>
+                        <div class="info-wrap">
+                            <div>
+                                <h3 class="title-item">British Fires</h3>
+                                <h6 class="website-title">Alpine.js, Tailwind, Animation, CMS, JSON, HTML</h6>
+                            </div>
+                            <div class="box-icon_purple">
+                                <a class="icon-right-arrow" href="https://britishfires.com/"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-6 col-sm-12">
@@ -419,22 +538,6 @@
                         <div class="info-wrap">
                             <div>
                                 <h3 class="title-item">Focalpoint</h3>
-                                <h6 class="website-title">Alpine.js, Tailwind, Animation, CMS, JSON, HTML</h6>
-                            </div>
-                            <div class="box-icon_purple">
-                                <a class="icon-right-arrow" href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-lg-6 col-sm-12">
-                    <div class="feature-box_portfolio p-0">
-                        <div class="img-wrap">
-                            <img class="img-style_coming" src="img/coming.png" alt="Coming soon"/>
-                        </div>
-                        <div class="info-wrap">
-                            <div>
-                                <h3 class="title-item">British Fires</h3>
                                 <h6 class="website-title">Alpine.js, Tailwind, Animation, CMS, JSON, HTML</h6>
                             </div>
                             <div class="box-icon_purple">
@@ -555,7 +658,7 @@
                     <a class="icon-github" href="https://github.com/nastiko" target="_blank"></a>
                 </div>
             </div>
-            <p class="color-text">© 2025 Anastasia Hrynkevich</p>
+            <p class="color-text">© <span id="year"></span> Anastasia Hrynkevich</p>
         </div>
     </div>
 </footer>
