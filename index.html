@@ -16,13 +16,18 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FB6H1YMZQQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-FB6H1YMZQQ');
     </script>
-
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="portfolio/js/jquery/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-color" data-bs-spy="scroll" data-bs-target=".desktop-navbar" data-bs-offset="10">
 <header class="border-header">
@@ -31,6 +36,7 @@
             <ul class="style-list">
                 <li><a class="link-active" href="#section-home">Home</a></li>
                 <li><a class="link-active" href="#section-skills">Skills</a></li>
+                <li><a class="link-active" href="#section-featured">Showcase</a></li>
                 <li><a class="link-active" href="#section-portfolio">Portfolio</a></li>
             </ul>
             <a href="#section-contact">
@@ -48,6 +54,11 @@
                     <li>
                         <a class="dropdown-item link-active_mobile" href="#section-skills">
                             <span class="link-active">Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item link-active_mobile" href="#section-featured">
+                            <span class="link-active">Showcase</span>
                         </a>
                     </li>
                     <li>
@@ -260,6 +271,210 @@
                                     <span class="icon-redux"></span>
                                     <span class="style-text">Redux</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-featured" class="container-fluid container-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 align-items-center pt-1">
+                    <div class="mt-5 transform-text">Showcase</div>
+                    <h3 class="medium-header">
+                        <span class="img-wave_last">Featured Project<br></span>
+                    </h3>
+                </div>
+            </div>
+            <div>
+                <p><span class="bs-header fs-5 fw-semibold">Trackr</span> is an AI-powered website monitoring platform available for both individual users <span class="bs-header fs-6 fw-semibold">(B2C)</span> and businesses <span class="bs-header fs-6 fw-semibold">(B2B)</span>. The platform automatically tracks website changes, competitor updates, product availability, job listings, and other important online activity, sending real-time notifications when changes occur. Its <span class="bs-header fs-6 fw-semibold">AI Helper</span> streamlines task creation by allowing users to set up monitoring workflows faster and with less manual configuration, making web monitoring more efficient
+                    and accessible for both personal and enterprise use.</p>
+            </div>
+            <div x-data="{ selectedTab: 'B2C' }">
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <button
+                                class="nav-link"
+                                :class="{ 'active': selectedTab === 'B2C' }"
+                                @click="selectedTab = 'B2C'">
+                            Track Bot
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button
+                                class="nav-link"
+                                :class="{ 'active': selectedTab === 'B2B' }"
+                                @click="selectedTab = 'B2B'">
+                            Trackr <span>Business</span>
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button
+                                class="nav-link"
+                                :class="{ 'active': selectedTab === 'Dark Theme' }"
+                                @click="selectedTab = 'Dark Theme'">
+                            Dark Theme
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button
+                                class="nav-link"
+                                :class="{ 'active': selectedTab === 'Emails' }"
+                                @click="selectedTab = 'Emails'">
+                            Emails
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content p-3">
+                    <div x-show="selectedTab === 'B2C'">
+                        <div class="tl-container ps-3 pe-3">
+                            <div class="main-timeline">
+                                <div class="timeline left">
+                                    <div class="card tl-card origin-right">
+                                        <div class="tl-img-container image-1 scale"></div>
+                                        <div class="card-body p-0">
+                                            <div class="accordion" id="alwaysOpen-1">
+                                                <div class="accordion-item">
+                                                    <p class="accordion-header">
+                                                        <button class="accordion-button fw-bold justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            <i class="fa-solid fa-lightbulb fa-lg me-2"></i>Brainstorm
+                                                        </button>
+                                                    </p>
+                                                    <div id="collapseOne" class="accordion-collapse collapse show">
+                                                        <div class="accordion-body">
+                                                            <p class="fw-light p-2">Brainwriting – is a nonverbal brainstorming method in which everyone writes down three ideas that relate to the topic of the brainstorm. Allow about four to six minutes for this process. Then everyone passes their ideas to the person on their right (or left, whichever you prefer), who will then build off of the ideas, adding bullet points or creative strategies.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="icons d-flex justify-content-center m-3">
+                                                    <a class="icon-link" title="More Info" aria-label="More Info" href="#">
+                                                        <i class="fa-solid fa-info fa-md"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline right">
+                                    <div class="card tl-card origin-left">
+                                        <div class="tl-img-container image-2 scale"></div>
+                                        <div class="card-body p-0">
+                                            <div class="accordion" id="alwaysOpen-2">
+                                                <div class="accordion-item">
+                                                    <p class="accordion-header">
+                                                        <button class="accordion-button fw-bold justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                            <i class="fa-solid fa-signs-post fa-lg me-2"></i>Mindmap
+                                                        </button>
+                                                    </p>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse">
+                                                        <div class="accordion-body">
+                                                            <p class="fw-light p-2">Back when writing things down was much more expensive and time-consuming, Greeks and Romans used a visualization technique called loci to memorize and recall information. Essentially, they would develop mental visuals for the things they needed to remember, allowing them to recall large amounts of information—such as an entire speech—at will.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="icons d-flex justify-content-center m-3">
+                                                    <a class="icon-link" title="More Info" aria-label="More Info" href="#">
+                                                        <i class="fa-solid fa-info fa-md"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline left">
+                                    <div class="card tl-card origin-right">
+                                        <div class="tl-img-container image-3 scale"></div>
+                                        <div class="card-body p-0">
+                                            <div class="accordion" id="alwaysOpen-3">
+                                                <div class="accordion-item">
+                                                    <p class="accordion-header">
+                                                        <button class="accordion-button fw-bold justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                            <i class="fa-solid fa-pencil fa-lg me-2"></i>Write a Draft
+                                                        </button>
+                                                    </p>
+                                                    <div id="collapseThree" class="accordion-collapse collapse">
+                                                        <div class="accordion-body">
+                                                            <p class="fw-light p-2">Back when writing things down was much more expensive and time-consuming, Greeks and Romans used a visualization technique called loci to memorize and recall information. Essentially, they would develop mental visuals for the things they needed to remember, allowing them to recall large amounts of information—such as an entire speech—at will.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="icons d-flex justify-content-center m-3">
+                                                    <a class="icon-link" title="More Info" aria-label="More Info" href="#">
+                                                        <i class="fa-solid fa-info fa-md"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline right">
+                                    <div class="card tl-card origin-left">
+                                        <div class="tl-img-container image-4 scale"></div>
+                                        <div class="card-body p-0">
+                                            <div class="accordion" id="alwaysOpen-4">
+                                                <div class="accordion-item">
+                                                    <p class="accordion-header">
+                                                        <button class="accordion-button fw-bold justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                            <i class="fa-solid fa-magnifying-glass fa-lg me-2"></i>Proofread
+                                                        </button>
+                                                    </p>
+                                                    <div id="collapseFour" class="accordion-collapse collapse">
+                                                        <div class="accordion-body">
+                                                            <p class="fw-light p-2">The main purpose of proofreading is to improve the quality of the paper, ensuring there are no lingering mistakes, and correcting generalized discourse errors or writing inconsistencies. Essentially, you want to make sure you have a well-defined communication goal.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="icons d-flex justify-content-center m-3">
+                                                    <a class="icon-link d-flex align-items-center" title="More Info" aria-label="More Info" href="#">
+                                                        <i class="fa-solid fa-info fa-md"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line mt-5 mb-4"></div>
+                    </div>
+
+                    <div x-show="selectedTab === 'B2B'">
+                        <strong><a href="#">B2B</a></strong> tab is selected
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row pb-4 d-flex gy-4">
+                <div class="col-xxl-4 col-lg-6 col-sm-12">
+                    <div class="feature-box_portfolio p-0">
+                        <div class="img-printforge"></div>
+                        <div class="info-wrap">
+                            <div>
+                                <h3 class="title-item">Printforge</h3>
+                                <h6 class="website-title">React, Next.js, TypeScript, JS, Tailwind</h6>
+                            </div>
+                            <div class="box-icon_purple">
+                                <a class="icon-right-arrow" href="https://next-printforge.vercel.app/"></a>
                             </div>
                         </div>
                     </div>
