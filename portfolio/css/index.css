@@ -584,6 +584,22 @@ body {
     transition: ease all 0.35s;
 }
 
+a.feature-box_portfolio {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+a.feature-box_portfolio:hover {
+    box-shadow: 3px 3px 0 0 var(--very-dark);
+    color: inherit;
+}
+
+a.feature-box_portfolio:focus-visible {
+    outline: 2px solid var(--borage-blue);
+    outline-offset: 2px;
+}
+
 .img-wrap {
     height: 345px;
     border-bottom: 2px solid var(--very-dark);
@@ -722,6 +738,7 @@ body {
 }
 
 .icon-right-arrow {
+    display: block;
     background-image: url("../img/right-arrow.svg");
     background-repeat: no-repeat;
     width: 32px;
