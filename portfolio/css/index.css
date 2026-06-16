@@ -1209,6 +1209,90 @@ body {
     left: -14px;
 }
 
+.timeline-entry {
+    position: relative;
+    width: 100%;
+}
+
+.tl-mini-cards {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 2;
+}
+
+.tl-mini-cards--right {
+    left: 50%;
+    width: 50%;
+    padding-left: 40px;
+    padding-right: 10px;
+}
+
+.tl-mini-cards--left {
+    left: 0;
+    width: 50%;
+    padding-right: 40px;
+    padding-left: 10px;
+}
+
+.tl-mini-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--white);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 2px LightGrey;
+    text-align: left;
+    cursor: pointer;
+    filter: brightness(0.55) saturate(0.7);
+    opacity: 0.85;
+    transition: filter 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.tl-mini-card--active {
+    filter: brightness(1) saturate(1);
+    opacity: 1;
+    border-color: var(--borage-blue);
+}
+
+.tl-mini-card:hover {
+    filter: brightness(0.75) saturate(0.85);
+    opacity: 0.95;
+}
+
+.tl-mini-card--active:hover {
+    filter: brightness(1) saturate(1);
+    opacity: 1;
+}
+
+.tl-mini-card__img {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+}
+
+.tl-mini-card__title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: var(--very-dark);
+}
+
+.tl-mini-card__text {
+    font-size: 0.7rem;
+    margin: 0;
+    color: var(--stone-cold);
+    line-height: 1.3;
+}
+
 .accordion {
     --bs-accordion-border-radius: 0 !important;
 }
@@ -1219,21 +1303,27 @@ body {
     --bs-accordion-border-radius: 0;
     --bs-accordion-inner-border-radius: 0;
     font-size: 18px;
+    color: var(--borage-blue) !important;
     background-color: #efefef;
 }
 
+.accordion-button:focus {
+    border: transparent !important;
+}
+
 .accordion-button:not(.collapsed) {
-    background-color: DodgerBlue;
-    color: White;
+    background-color: white !important;
+    color: var(--borage-blue) !important;
 }
 
 .accordion-button:after {
     margin: 0;
     margin-left: 15px;
+    filter: invert(72%) sepia(81%) saturate(6902%) hue-rotate(223deg) brightness(88%) contrast(81%);
 }
 
 .accordion-button:not(.collapsed):after {
-    filter: invert(100%) brightness(200%);
+    filter: invert(72%) sepia(81%) saturate(6902%) hue-rotate(223deg) brightness(88%) contrast(81%);
 }
 
 .accordion-item {
@@ -1241,7 +1331,7 @@ body {
 }
 
 .card-footer {
-    background-color: White;
+    background-color: white;
     border-bottom: 5px solid white;
 }
 
@@ -1313,5 +1403,82 @@ body {
 
     .tl-card {
         transform-origin: 0% 0%;
+    }
+
+    .timeline-entry {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+        padding-right: 8px;
+    }
+
+    .timeline {
+        order: 2;
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        padding-right: 0;
+    }
+
+    .tl-mini-cards {
+        position: static;
+        flex: 0 0 40px;
+        width: 40px;
+        padding: 0;
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .tl-mini-cards--right,
+    .tl-mini-cards--left {
+        order: 3;
+        left: auto;
+        padding: 0;
+    }
+
+    .tl-mini-card {
+        width: 40px;
+        height: 40px;
+        min-height: 40px;
+        padding: 0;
+        display: block;
+        flex-shrink: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        filter: brightness(0.55) saturate(0.7);
+        opacity: 1;
+        background-color: #b8b8b8;
+        border: 2px solid transparent;
+        box-shadow: 0 2px 8px rgba(24, 23, 28, 0.12);
+    }
+
+    .tl-mini-card--active {
+        filter: brightness(1) saturate(1);
+        background-color: var(--white);
+        border-color: var(--borage-blue);
+    }
+
+    .tl-mini-card:hover {
+        filter: brightness(0.7) saturate(0.8);
+        opacity: 1;
+        background-color: #b8b8b8;
+    }
+
+    .tl-mini-card--active:hover {
+        filter: brightness(1) saturate(1);
+        background-color: var(--white);
+    }
+
+    .tl-mini-card__body {
+        display: none;
+    }
+
+    .tl-mini-card__img {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 4px;
     }
 }

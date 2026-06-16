@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&family=Rubik&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="portfolio/css/index.css?version=202605212002">
     <link rel="stylesheet" href="portfolio/css/libraries/bootstrap/bootstrap.min.css">
     <title>Anastasia Hrynkevich</title>
@@ -336,62 +337,140 @@
                     <div x-show="selectedTab === 'B2C'">
                         <div class="tl-container ps-3 pe-3">
                             <div class="main-timeline">
-                                <div class="timeline left">
-                                    <div class="card tl-card origin-right">
-                                        <div class="tl-img-container image-1 scale"></div>
-                                        <div class="card-body p-0">
-                                            <div class="accordion" id="alwaysOpen-1">
-                                                <div class="accordion-item">
-                                                    <p class="accordion-header">
-                                                        <button class="accordion-button fw-bold justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                            <i class="fa-solid fa-lightbulb fa-lg me-2"></i>Brainstorm
-                                                        </button>
-                                                    </p>
-                                                    <div id="collapseOne" class="accordion-collapse collapse show">
-                                                        <div class="accordion-body">
-                                                            <p class="fw-light p-2">Brainwriting – is a nonverbal brainstorming method in which everyone writes down three ideas that relate to the topic of the brainstorm. Allow about four to six minutes for this process. Then everyone passes their ideas to the person on their right (or left, whichever you prefer), who will then build off of the ideas, adding bullet points or creative strategies.
-                                                            </p>
+                                <div class="timeline-entry" x-data="{
+                                    selected: 0,
+                                    items: [
+                                        {
+                                            title: 'Brainwriting',
+                                            summary: 'Silent idea generation in rounds',
+                                            image: 'https://assets.codepen.io/9400490/idea.jpg',
+                                            description: 'Brainwriting is a nonverbal brainstorming method in which everyone writes down three ideas that relate to the topic of the brainstorm. Allow about four to six minutes for this process. Then everyone passes their ideas to the person on their right (or left), who will then build off of the ideas, adding bullet points or creative strategies.'
+                                        },
+                                        {
+                                            title: 'Round Robin',
+                                            summary: 'Take turns sharing one idea at a time',
+                                            image: 'https://assets.codepen.io/9400490/map.jpg',
+                                            description: 'Round Robin brainstorming gives every participant a turn to contribute one idea before the group moves to the next person. This structure prevents dominant voices from taking over the session and ensures quieter team members are heard equally.'
+                                        },
+                                        {
+                                            title: 'Starbursting',
+                                            summary: 'Ask who, what, where, when, why, how',
+                                            image: 'https://assets.codepen.io/9400490/writing.jpg',
+                                            description: 'Starbursting focuses on generating questions rather than answers. The team places an idea at the center and expands outward with who, what, where, when, why, and how prompts to explore the concept from every angle before committing to a direction.'
+                                        }
+                                    ]
+                                }">
+                                    <div class="timeline left">
+                                        <div class="card tl-card origin-right">
+                                            <div class="tl-img-container scale" :style="`background: url('${items[selected].image}') 50% 50% no-repeat; background-size: cover;`"></div>
+                                            <div class="card-body p-0">
+                                                <div class="accordion" id="alwaysOpen-1">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button fw-bold justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Brainstorm
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse show">
+                                                            <div class="accordion-body">
+                                                                <p class="fw-light p-2" x-text="items[selected].description"></p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="icons d-flex justify-content-center m-3">
-                                                    <a class="icon-link" title="More Info" aria-label="More Info" href="#">
-                                                        <i class="fa-solid fa-info fa-md"></i>
-                                                    </a>
+                                                <div class="card-footer">
+                                                    <div class="icons d-flex justify-content-center m-3">
+                                                        <a class="icon-link" title="More Info" aria-label="More Info" href="#">
+                                                            <i class="fa-solid fa-info fa-md"></i>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="tl-mini-cards tl-mini-cards--right">
+                                        <template x-for="(item, index) in items" :key="index">
+                                            <button
+                                                    type="button"
+                                                    class="tl-mini-card"
+                                                    :class="{ 'tl-mini-card--active': selected === index }"
+                                                    :aria-label="item.title"
+                                                    @click="selected = index">
+                                                <div class="tl-mini-card__img" :style="`background-image: url('${item.image}')`"></div>
+                                                <div class="tl-mini-card__body">
+                                                    <h6 class="tl-mini-card__title" x-text="item.title"></h6>
+                                                    <p class="tl-mini-card__text" x-text="item.summary"></p>
+                                                </div>
+                                            </button>
+                                        </template>
+                                    </div>
                                 </div>
-                                <div class="timeline right">
-                                    <div class="card tl-card origin-left">
-                                        <div class="tl-img-container image-2 scale"></div>
-                                        <div class="card-body p-0">
-                                            <div class="accordion" id="alwaysOpen-2">
-                                                <div class="accordion-item">
-                                                    <p class="accordion-header">
-                                                        <button class="accordion-button fw-bold justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                                            <i class="fa-solid fa-signs-post fa-lg me-2"></i>Mindmap
-                                                        </button>
-                                                    </p>
-                                                    <div id="collapseTwo" class="accordion-collapse collapse">
-                                                        <div class="accordion-body">
-                                                            <p class="fw-light p-2">Back when writing things down was much more expensive and time-consuming, Greeks and Romans used a visualization technique called loci to memorize and recall information. Essentially, they would develop mental visuals for the things they needed to remember, allowing them to recall large amounts of information—such as an entire speech—at will.
-                                                            </p>
+                                <div class="timeline-entry" x-data="{
+                                    selected: 0,
+                                    items: [
+                                        {
+                                            title: 'Loci Method',
+                                            summary: 'Visual memory palace technique',
+                                            image: 'https://assets.codepen.io/9400490/map.jpg',
+                                            description: 'Back when writing things down was much more expensive and time-consuming, Greeks and Romans used a visualization technique called loci to memorize and recall information. Essentially, they would develop mental visuals for the things they needed to remember, allowing them to recall large amounts of information such as an entire speech at will.'
+                                        },
+                                        {
+                                            title: 'Radiant Thinking',
+                                            summary: 'Branch ideas from a central concept',
+                                            image: 'https://assets.codepen.io/9400490/idea.jpg',
+                                            description: 'Radiant thinking starts with one core topic in the center and expands outward in branches. Each branch represents a related theme, helping teams map complex information in a way that mirrors how the brain naturally makes associations.'
+                                        },
+                                        {
+                                            title: 'Concept Mapping',
+                                            summary: 'Connect ideas with labeled relationships',
+                                            image: 'https://assets.codepen.io/9400490/writing.jpg',
+                                            description: 'Concept mapping links ideas with labeled connections to show how topics relate to one another. It is especially useful when you need to clarify hierarchy, dependencies, and cross-links between different parts of a project.'
+                                        }
+                                    ]
+                                }">
+                                    <div class="timeline right">
+                                        <div class="card tl-card origin-left">
+                                            <div class="tl-img-container scale" :style="`background: url('${items[selected].image}') 50% 50% no-repeat; background-size: cover;`"></div>
+                                            <div class="card-body p-0">
+                                                <div class="accordion" id="alwaysOpen-2">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button class="accordion-button fw-bold justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                <i class="fa-solid fa-signs-post fa-lg me-2"></i>Mindmap
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseTwo" class="accordion-collapse collapse">
+                                                            <div class="accordion-body">
+                                                                <p class="fw-light p-2" x-text="items[selected].description"></p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="icons d-flex justify-content-center m-3">
-                                                    <a class="icon-link" title="More Info" aria-label="More Info" href="#">
-                                                        <i class="fa-solid fa-info fa-md"></i>
-                                                    </a>
+                                                <div class="card-footer">
+                                                    <div class="icons d-flex justify-content-center m-3">
+                                                        <a class="icon-link" title="More Info" aria-label="More Info" href="#">
+                                                            <i class="fa-solid fa-info fa-md"></i>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="tl-mini-cards tl-mini-cards--left">
+                                        <template x-for="(item, index) in items" :key="index">
+                                            <button
+                                                    type="button"
+                                                    class="tl-mini-card"
+                                                    :class="{ 'tl-mini-card--active': selected === index }"
+                                                    :aria-label="item.title"
+                                                    @click="selected = index">
+                                                <div class="tl-mini-card__img" :style="`background-image: url('${item.image}')`"></div>
+                                                <div class="tl-mini-card__body">
+                                                    <h6 class="tl-mini-card__title" x-text="item.title"></h6>
+                                                    <p class="tl-mini-card__text" x-text="item.summary"></p>
+                                                </div>
+                                            </button>
+                                        </template>
                                     </div>
                                 </div>
                                 <div class="timeline left">
