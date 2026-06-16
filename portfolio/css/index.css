@@ -1153,7 +1153,7 @@ a.feature-box_portfolio:focus-visible {
     content: "";
     position: absolute;
     width: 0px;
-    border: 1px dashed var(--borage-blue);
+    border: 1px dashed var(--very-dark);
     background-color: transparent;
     top: 0;
     bottom: 0px;
@@ -1175,9 +1175,9 @@ a.feature-box_portfolio:focus-visible {
     width: 22px;
     height: 22px;
     border: 3px solid #f0f2f5;
-    outline: 1px solid var(--borage-blue);
+    outline: 1px solid var(--yellow);
     right: -8px;
-    background-color: var(--borage-blue);
+    background-color: var(--yellow);
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -1238,6 +1238,11 @@ a.feature-box_portfolio:focus-visible {
     flex-direction: column;
     gap: 12px;
     z-index: 2;
+    scale: 0;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 200px 350px;
 }
 
 .tl-mini-cards--right {
@@ -1245,6 +1250,7 @@ a.feature-box_portfolio:focus-visible {
     width: 50%;
     padding-left: 40px;
     padding-right: 10px;
+    transform-origin: 0% 0%;
 }
 
 .tl-mini-cards--left {
@@ -1252,6 +1258,7 @@ a.feature-box_portfolio:focus-visible {
     width: 50%;
     padding-right: 40px;
     padding-left: 10px;
+    transform-origin: 100% 0%;
 }
 
 .tl-mini-card {
@@ -1262,7 +1269,7 @@ a.feature-box_portfolio:focus-visible {
     padding: 10px;
     background-color: var(--white);
     border: 2px solid transparent;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: 0 2px 12px 2px LightGrey;
     text-align: left;
     cursor: pointer;
@@ -1274,7 +1281,7 @@ a.feature-box_portfolio:focus-visible {
 .tl-mini-card--active {
     filter: brightness(1) saturate(1);
     opacity: 1;
-    border-color: var(--borage-blue);
+    border: 1px solid var(--borage-blue);
 }
 
 .tl-mini-card:hover {
@@ -1319,6 +1326,7 @@ a.feature-box_portfolio:focus-visible {
     --bs-accordion-border-width: 0;
     --bs-accordion-border-radius: 0;
     --bs-accordion-inner-border-radius: 0;
+    border-top: 1px solid var(--very-dark) !important;
     font-size: 18px;
     color: var(--borage-blue) !important;
     background-color: #efefef;
@@ -1326,6 +1334,8 @@ a.feature-box_portfolio:focus-visible {
 
 .accordion-button:focus {
     border: transparent !important;
+    border-top: 1px solid var(--very-dark) !important;
+    box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
@@ -1348,24 +1358,27 @@ a.feature-box_portfolio:focus-visible {
 }
 
 .card-footer {
-    background-color: white;
-    border-bottom: 5px solid white;
+    background-color: white !important;
+    border-top: 1px solid var(--very-dark) !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .icon-link {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 1px solid DimGrey;
+    border: 1px solid var(--yellow);
     border-radius: 50%;
     margin: 0;
     transition: scale 0.3s ease;
     text-decoration: none;
+
     & i {
-        color: DimGrey;
+        color: var(--yellow);
     }
 }
 
@@ -1446,6 +1459,7 @@ a.feature-box_portfolio:focus-visible {
         padding: 0;
         gap: 6px;
         margin-top: 10px;
+        transform-origin: 0% 0%;
     }
 
     .tl-mini-cards--right,
@@ -1474,7 +1488,7 @@ a.feature-box_portfolio:focus-visible {
     .tl-mini-card--active {
         filter: brightness(1) saturate(1);
         background-color: var(--white);
-        border-color: var(--borage-blue);
+        border: 1px solid var(--borage-blue);
     }
 
     .tl-mini-card:hover {
