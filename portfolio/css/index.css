@@ -1110,8 +1110,7 @@ a.feature-box_portfolio:focus-visible {
 
 .tl-img-container {
     width: 100%;
-    height: 200px;
-    filter: saturate(40%);
+    height: 300px;
     transition: all 0.4s ease;
 }
 
@@ -1321,14 +1320,13 @@ a.feature-box_portfolio:focus-visible {
     --bs-accordion-border-radius: 0 !important;
 }
 
-
 .accordion-button {
     --bs-accordion-border-width: 0;
     --bs-accordion-border-radius: 0;
     --bs-accordion-inner-border-radius: 0;
     border-top: 1px solid var(--very-dark) !important;
     font-size: 18px;
-    color: var(--borage-blue) !important;
+    color: var(--very-dark) !important;
     background-color: #efefef;
 }
 
@@ -1340,7 +1338,7 @@ a.feature-box_portfolio:focus-visible {
 
 .accordion-button:not(.collapsed) {
     background-color: white !important;
-    color: var(--borage-blue) !important;
+    color: var(--very-dark) !important;
 }
 
 .accordion-button:after {
@@ -1351,6 +1349,11 @@ a.feature-box_portfolio:focus-visible {
 
 .accordion-button:not(.collapsed):after {
     filter: invert(72%) sepia(81%) saturate(6902%) hue-rotate(223deg) brightness(88%) contrast(81%);
+}
+
+.accordion-body {
+    padding-top: 0 !important;
+    padding-inline: 20px !important;
 }
 
 .accordion-item {
@@ -1379,16 +1382,6 @@ a.feature-box_portfolio:focus-visible {
 
     & i {
         color: var(--yellow);
-    }
-}
-
-@media (hover: hover) {
-    .icon-link:hover {
-        border: 1px solid DodgerBlue;
-        scale: 1.15;
-    }
-    .icon-link:hover i {
-        color: DodgerBlue;
     }
 }
 

@@ -290,7 +290,10 @@
                 </div>
             </div>
             <div>
-                <p><span class="bs-header fs-5 fw-semibold">Trackr</span> is an AI-powered website monitoring platform available for both individual users <span class="bs-header fs-6 fw-semibold">(B2C)</span> and businesses <span class="bs-header fs-6 fw-semibold">(B2B)</span>. The platform automatically tracks website changes, competitor updates, product availability, job listings, and other important online activity, sending real-time notifications when changes occur. Its <span class="bs-header fs-6 fw-semibold">AI Helper</span> streamlines task creation by allowing users to set up monitoring workflows faster and with less manual configuration, making web monitoring more efficient
+                <p><span class="bs-header fs-5 fw-semibold">Trackr</span> is an AI-powered website monitoring platform available for both individual users
+                    <a class="text-decoration-underline text-black" href="https://trackr.bot/en" target="_blank"><span class="bs-header fs-6 fw-semibold">Trackr.bot</span></a> and businesses
+                    <a class="text-decoration-underline text-black" href="https://b2b.trackr.bot/en" target="_blank"><span class="bs-header fs-6 fw-semibold">Trackr Business</span></a>. The platform automatically tracks website changes, competitor updates, product availability, job listings, and other important online activity, sending real-time notifications when changes occur. Its <span class="bs-header fs-6 fw-semibold">AI Helper</span> streamlines task creation by allowing users to set up
+                    monitoring workflows faster and with less manual configuration, making web monitoring more efficient
                     and accessible for both personal and enterprise use.</p>
             </div>
             <div x-data="{ selectedTab: 'B2C' }">
@@ -341,10 +344,12 @@
                                     selected: 0,
                                     items: [
                                         {
-                                            title: 'Brainwriting',
-                                            summary: 'Silent idea generation in rounds',
-                                            image: 'https://assets.codepen.io/9400490/idea.jpg',
-                                            description: 'Brainwriting is a nonverbal brainstorming method in which everyone writes down three ideas that relate to the topic of the brainstorm. Allow about four to six minutes for this process. Then everyone passes their ideas to the person on their right (or left), who will then build off of the ideas, adding bullet points or creative strategies.'
+                                            title: 'Trackr.bot B2C Platform',
+                                            summary: 'Customer-facing SaaS platform for website and price monitoring',
+                                            image: 'portfolio/img/trackr/b2c-fe.png',
+                                            description: 'Developed responsive marketing and product-facing experiences for ',
+                                            link: { text: 'Trackr.bot', href: 'https://trackr.bot/en' },
+                                            descriptionAfter: ', a SaaS platform that enables users to monitor website changes, track prices, and receive automated alerts. Built using Tailwind CSS, Alpine.js, and custom animations to create an engaging and user-friendly experience'
                                         },
                                         {
                                             title: 'Round Robin',
@@ -355,7 +360,7 @@
                                         {
                                             title: 'Starbursting',
                                             summary: 'Ask who, what, where, when, why, how',
-                                            image: 'https://assets.codepen.io/9400490/writing.jpg',
+                                            image: 'portfolio/img/trackr/b2c-lp.png',
                                             description: 'Starbursting focuses on generating questions rather than answers. The team places an idea at the center and expands outward with who, what, where, when, why, and how prompts to explore the concept from every angle before committing to a direction.'
                                         }
                                     ]
@@ -367,13 +372,21 @@
                                                 <div class="accordion" id="alwaysOpen-1">
                                                     <div class="accordion-item">
                                                         <h2 class="accordion-header">
-                                                            <button class="accordion-button fw-bold justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                                Brainstorm
+                                                            <button x-text="items[selected].title" class="accordion-button fw-bold justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                             </button>
                                                         </h2>
                                                         <div id="collapseOne" class="accordion-collapse collapse show">
                                                             <div class="accordion-body">
-                                                                <p class="fw-light p-2" x-text="items[selected].description"></p>
+                                                                <p class="fw-light mb-0">
+                                                                    <template x-if="items[selected].link">
+                                                                        <span>
+                                                                            <span x-text="items[selected].description"></span><a class="text-decoration-underline text-black fw-semibold" :href="items[selected].link.href" target="_blank" rel="noopener noreferrer" x-text="items[selected].link.text"></a><span x-text="items[selected].descriptionAfter"></span>
+                                                                        </span>
+                                                                    </template>
+                                                                    <template x-if="!items[selected].link">
+                                                                        <span x-text="items[selected].description"></span>
+                                                                    </template>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -441,7 +454,16 @@
                                                         </h2>
                                                         <div id="collapseTwo" class="accordion-collapse collapse">
                                                             <div class="accordion-body">
-                                                                <p class="fw-light p-2" x-text="items[selected].description"></p>
+                                                                <p class="fw-light p-2">
+                                                                    <template x-if="items[selected].link">
+                                                                        <span>
+                                                                            <span x-text="items[selected].description"></span><a class="text-decoration-underline text-black" :href="items[selected].link.href" target="_blank" rel="noopener noreferrer" x-text="items[selected].link.text"></a><span x-text="items[selected].descriptionAfter"></span>
+                                                                        </span>
+                                                                    </template>
+                                                                    <template x-if="!items[selected].link">
+                                                                        <span x-text="items[selected].description"></span>
+                                                                    </template>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -588,9 +610,9 @@
                 </div>
                 <div class="col-xxl-4 col-lg-6 col-sm-12">
                     <a class="feature-box_portfolio p-0" href="https://arthome.react.anastasia-web.dev/">
-<!--<div class="img-wrap">
-                            <img class="img-style_coming" src="img/coming.png" alt="Coming soon"/>
-                        </div>-->
+                        <!--<div class="img-wrap">
+                                                    <img class="img-style_coming" src="img/coming.png" alt="Coming soon"/>
+                                                </div>-->
                         <div class="img-react_arthome"></div>
                         <div class="info-wrap">
                             <div>
