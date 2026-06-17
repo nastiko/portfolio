@@ -1439,7 +1439,7 @@ a.feature-box_portfolio:focus-visible {
 
     .timeline {
         width: 100%;
-        padding-right: 25px;
+        padding-right: 0;
     }
 
     .card-footer {
