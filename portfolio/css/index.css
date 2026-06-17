@@ -1051,7 +1051,8 @@ a.feature-box_portfolio:focus-visible {
 /*Assignment*/
 .card {
     border-radius: 0 !important;
-    border: 1px solid var(--very-dark) !important;
+    border: 2px solid var(--very-dark) !important;
+    box-shadow: none !important;
 }
 
 .hr-line {
@@ -1194,7 +1195,7 @@ a.feature-box_portfolio:focus-visible {
     width: 11px;
     height: 22px;
     border: none;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='22' viewBox='0 0 11 22'%3E%3Cpolygon points='0,0 11,11 0,22' fill='white'/%3E%3Cpolyline points='0,0 11,11 0,22' fill='none' stroke='%2318171C' stroke-width='1'/%3E%3C/svg%3E") no-repeat center / contain;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='22' viewBox='0 0 11 22'%3E%3Cpolygon points='0,0 11,11 0,22' fill='white'/%3E%3Cline x1='0' y1='0' x2='11' y2='11' stroke='%2318171C' stroke-width='2'/%3E%3Cline x1='11' y1='11' x2='0' y2='22' stroke='%2318171C' stroke-width='2'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -1207,7 +1208,7 @@ a.feature-box_portfolio:focus-visible {
     width: 11px;
     height: 22px;
     border: none;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='22' viewBox='0 0 11 22'%3E%3Cpolygon points='11,0 0,11 11,22' fill='white'/%3E%3Cpolyline points='11,0 0,11 11,22' fill='none' stroke='%2318171C' stroke-width='1'/%3E%3C/svg%3E") no-repeat center / contain;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='22' viewBox='0 0 11 22'%3E%3Cpolygon points='11,0 0,11 11,22' fill='white'/%3E%3Cline x1='11' y1='0' x2='0' y2='11' stroke='%2318171C' stroke-width='2'/%3E%3Cline x1='0' y1='11' x2='11' y2='22' stroke='%2318171C' stroke-width='2'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 
 /* Fix the circle for containers on the right side */
@@ -1270,7 +1271,7 @@ a.feature-box_portfolio:focus-visible {
 .tl-mini-card--active {
     filter: brightness(1) saturate(1);
     opacity: 1;
-    border: 1px solid var(--borage-blue);
+    border: 2px solid var(--borage-blue);
 }
 
 @media (hover: hover) {
@@ -1293,7 +1294,7 @@ a.feature-box_portfolio:focus-visible {
     width: 64px;
     height: 64px;
     min-width: 64px;
-    border-radius: 6px;
+    border-radius: 0;
     background-size: cover;
     background-position: center;
 }
@@ -1320,7 +1321,7 @@ a.feature-box_portfolio:focus-visible {
     --bs-accordion-border-width: 0;
     --bs-accordion-border-radius: 0;
     --bs-accordion-inner-border-radius: 0;
-    border-top: 1px solid var(--very-dark) !important;
+    border-top: 2px solid var(--very-dark) !important;
     font-size: 18px;
     color: var(--borage-blue) !important;
     background-color: #efefef;
@@ -1328,7 +1329,7 @@ a.feature-box_portfolio:focus-visible {
 
 .accordion-button:focus {
     border: transparent !important;
-    border-top: 1px solid var(--very-dark) !important;
+    border-top: 2px solid var(--very-dark) !important;
     box-shadow: none !important;
 }
 
@@ -1358,7 +1359,7 @@ a.feature-box_portfolio:focus-visible {
 
 .card-footer {
     background-color: white !important;
-    border-top: 1px solid var(--very-dark) !important;
+    border-top: 2px solid var(--very-dark) !important;
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -1412,7 +1413,7 @@ a.feature-box_portfolio:focus-visible {
         width: 11px;
         height: 22px;
         border: none;
-        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='22' viewBox='0 0 11 22'%3E%3Cpolygon points='11,0 0,11 11,22' fill='white'/%3E%3Cpolyline points='11,0 0,11 11,22' fill='none' stroke='%2318171C' stroke-width='1'/%3E%3C/svg%3E") no-repeat center / contain;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='22' viewBox='0 0 11 22'%3E%3Cpolygon points='11,0 0,11 11,22' fill='white'/%3E%3Cline x1='11' y1='0' x2='0' y2='11' stroke='%2318171C' stroke-width='2'/%3E%3Cline x1='0' y1='11' x2='11' y2='22' stroke='%2318171C' stroke-width='2'/%3E%3C/svg%3E") no-repeat center / contain;
     }
 
     /* Make sure all circles are at the same spot */
@@ -1516,7 +1517,7 @@ a.feature-box_portfolio:focus-visible {
     .tl-mini-card--active {
         filter: brightness(1) saturate(1);
         background-color: var(--white);
-        border: 1px solid var(--borage-blue);
+        border: 2px solid var(--borage-blue);
     }
 
     .tl-mini-card:hover,
