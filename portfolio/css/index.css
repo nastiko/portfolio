@@ -1361,6 +1361,12 @@ a.feature-box_portfolio:focus-visible {
     display: none;
 }
 
+.tl-card-footer-icons {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
 .icon-link {
     height: 30px;
     width: 30px;
