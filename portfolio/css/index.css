@@ -1357,6 +1357,10 @@ a.feature-box_portfolio:focus-visible {
     margin: 0 !important;
 }
 
+.tl-mini-cards--mobile {
+    display: none;
+}
+
 .icon-link {
     height: 30px;
     width: 30px;
@@ -1405,7 +1409,8 @@ a.feature-box_portfolio:focus-visible {
         left: -4px;
     }
 
-    .left::before. .right::before {
+    .left::before,
+    .right::before {
         display: none;
     }
 
@@ -1419,43 +1424,66 @@ a.feature-box_portfolio:focus-visible {
     }
 
     .timeline-entry {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 8px;
+        display: block;
+        position: relative;
         width: 100%;
-        padding-right: 8px;
+        padding-right: 0;
+        padding-bottom: 0;
     }
 
     .timeline {
-        order: 2;
-        flex: 1;
-        min-width: 0;
-        width: auto;
-        padding-right: 0;
+        width: 100%;
+        padding-right: 25px;
     }
 
-    .tl-mini-cards {
+    .card-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px !important;
+    }
+
+    .tl-card-footer-icons {
+        display: none !important;
+    }
+
+    .tl-mini-cards--desktop {
+        display: none !important;
+    }
+
+    .tl-mini-cards--mobile {
+        display: flex;
         position: static;
-        flex: 0 0 40px;
-        width: 40px;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        z-index: auto;
+        width: 100%;
+        max-width: 100%;
         padding: 0;
-        gap: 6px;
-        margin-top: 10px;
-        transform-origin: 0% 0%;
+        gap: 10px;
+        margin-top: 0;
+        scale: 1;
+        opacity: 1;
+        animation: none;
+        transform-origin: center;
     }
 
-    .tl-mini-cards--right,
-    .tl-mini-cards--left {
-        order: 3;
-        left: auto;
+    .tl-mini-cards--mobile.tl-mini-cards--right,
+    .tl-mini-cards--mobile.tl-mini-cards--left {
         padding: 0;
     }
 
     .tl-mini-card {
-        width: 40px;
-        height: 40px;
-        min-height: 40px;
+        width: 48px;
+        height: 48px;
+        min-height: 48px;
         padding: 0;
         display: block;
         flex-shrink: 0;
@@ -1490,9 +1518,9 @@ a.feature-box_portfolio:focus-visible {
     }
 
     .tl-mini-card__img {
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        border-radius: 4px;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 6px;
     }
 }

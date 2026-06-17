@@ -382,7 +382,23 @@
                                                     </div>
                                                 </div>
                                                 <div class="card-footer">
-                                                    <div class="icons d-flex justify-content-center my-3 mx-0">
+                                                    <div class="tl-mini-cards tl-mini-cards--mobile tl-mini-cards--right">
+                                                        <template x-for="(item, index) in items" :key="index">
+                                                            <button
+                                                                    type="button"
+                                                                    class="tl-mini-card"
+                                                                    :class="{ 'tl-mini-card--active': selected === index }"
+                                                                    :aria-label="item.title"
+                                                                    @click="selected = index">
+                                                                <div class="tl-mini-card__img" :style="`background-image: url('${item.image}')`"></div>
+                                                                <div class="tl-mini-card__body">
+                                                                    <h6 class="tl-mini-card__title" x-text="item.title"></h6>
+                                                                    <p class="tl-mini-card__text" x-text="item.summary"></p>
+                                                                </div>
+                                                            </button>
+                                                        </template>
+                                                    </div>
+                                                    <div class="icons d-flex justify-content-center my-3 mx-0 tl-card-footer-icons">
                                                         <span class="icon-link">
                                                             <i class="fa-solid fa-info fa-md"></i>
                                                         </span>
@@ -391,7 +407,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tl-mini-cards tl-mini-cards--right">
+                                    <div class="tl-mini-cards tl-mini-cards--desktop tl-mini-cards--right">
                                         <template x-for="(item, index) in items" :key="index">
                                             <button
                                                     type="button"
@@ -480,7 +496,23 @@
                                                     </div>
                                                 </div>
                                                 <div class="card-footer">
-                                                    <div class="icons d-flex justify-content-center m-3">
+                                                    <div class="tl-mini-cards tl-mini-cards--mobile tl-mini-cards--left">
+                                                        <template x-for="(item, index) in items" :key="index">
+                                                            <button
+                                                                    type="button"
+                                                                    class="tl-mini-card"
+                                                                    :class="{ 'tl-mini-card--active': selected === index }"
+                                                                    :aria-label="item.title"
+                                                                    @click="selected = index">
+                                                                <div class="tl-mini-card__img" :style="`background-image: url('${item.image}')`"></div>
+                                                                <div class="tl-mini-card__body">
+                                                                    <h6 class="tl-mini-card__title" x-text="item.title"></h6>
+                                                                    <p class="tl-mini-card__text" x-text="item.summary"></p>
+                                                                </div>
+                                                            </button>
+                                                        </template>
+                                                    </div>
+                                                    <div class="icons d-flex justify-content-center m-3 tl-card-footer-icons">
                                                         <span class="icon-link">
                                                             <i class="fa-solid fa-info fa-md"></i>
                                                         </span>
@@ -489,7 +521,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tl-mini-cards tl-mini-cards--left">
+                                    <div class="tl-mini-cards tl-mini-cards--desktop tl-mini-cards--left">
                                         <template x-for="(item, index) in items" :key="index">
                                             <button
                                                     type="button"
