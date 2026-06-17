@@ -1259,12 +1259,12 @@ a.feature-box_portfolio:focus-visible {
     background-color: var(--white);
     border: 2px solid transparent;
     border-radius: 0;
-    box-shadow: 0 2px 12px 2px LightGrey;
+    box-shadow: 0 0 0 0 var(--very-dark);
     text-align: left;
     cursor: pointer;
     filter: brightness(0.55) saturate(0.7);
     opacity: 0.85;
-    transition: filter 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    transition: ease all 0.35s;
 }
 
 .tl-mini-card--active {
@@ -1273,14 +1273,20 @@ a.feature-box_portfolio:focus-visible {
     border: 1px solid var(--borage-blue);
 }
 
-.tl-mini-card:hover {
-    filter: brightness(0.75) saturate(0.85);
-    opacity: 0.95;
-}
+@media (hover: hover) {
+    .tl-mini-card:hover {
+        filter: brightness(1) saturate(1);
+        opacity: 1;
+        border-color: var(--very-dark);
+        box-shadow: 3px 3px 0 0 var(--very-dark);
+    }
 
-.tl-mini-card--active:hover {
-    filter: brightness(1) saturate(1);
-    opacity: 1;
+    .tl-mini-card--active:hover {
+        filter: brightness(1) saturate(1);
+        opacity: 1;
+        border-color: var(--borage-blue);
+        box-shadow: 3px 3px 0 0 var(--very-dark);
+    }
 }
 
 .tl-mini-card__img {
@@ -1450,6 +1456,10 @@ a.feature-box_portfolio:focus-visible {
         padding: 12px 16px !important;
     }
 
+    .card-footer .icons {
+        margin: 0 !important;
+    }
+
     .tl-card-footer-icons {
         display: none !important;
     }
@@ -1493,13 +1503,14 @@ a.feature-box_portfolio:focus-visible {
         padding: 0;
         display: block;
         flex-shrink: 0;
-        border-radius: 8px;
+        border-radius: 0;
         overflow: hidden;
         filter: brightness(0.55) saturate(0.7);
         opacity: 1;
-        background-color: #b8b8b8;
+        background-color: var(--white);
         border: 2px solid transparent;
-        box-shadow: 0 2px 8px rgba(24, 23, 28, 0.12);
+        box-shadow: 0 0 0 0 var(--very-dark);
+        transition: ease all 0.35s;
     }
 
     .tl-mini-card--active {
@@ -1508,15 +1519,17 @@ a.feature-box_portfolio:focus-visible {
         border: 1px solid var(--borage-blue);
     }
 
-    .tl-mini-card:hover {
-        filter: brightness(0.7) saturate(0.8);
-        opacity: 1;
-        background-color: #b8b8b8;
+    .tl-mini-card:hover,
+    .tl-mini-card--active:hover {
+        filter: brightness(0.55) saturate(0.7);
+        border-color: transparent;
+        box-shadow: 0 0 0 0 var(--very-dark);
     }
 
-    .tl-mini-card--active:hover {
+    .tl-mini-card--active:hover,
+    .tl-mini-card--active.tl-mini-card:hover {
         filter: brightness(1) saturate(1);
-        background-color: var(--white);
+        border-color: var(--borage-blue);
     }
 
     .tl-mini-card__body {
@@ -1527,6 +1540,6 @@ a.feature-box_portfolio:focus-visible {
         width: 48px;
         height: 48px;
         min-width: 48px;
-        border-radius: 6px;
+        border-radius: 0;
     }
 }
